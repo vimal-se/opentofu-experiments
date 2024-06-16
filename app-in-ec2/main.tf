@@ -1,16 +1,5 @@
-
-
 provider "aws" {
   region = "ap-south-1"
-}
-
-resource "aws_s3_bucket" "tf-bucket-my-app-data" {
-  bucket = "tf-bucket-my-app-data"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "test1"
-  }
 }
 
 resource "aws_vpc" "tf-vpc" {
