@@ -71,7 +71,7 @@ resource "aws_instance" "web" {
   subnet_id = aws_subnet.tf-subnet-example1.id
   security_groups = [aws_security_group.tf-security-group.id]
   associate_public_ip_address = true
-  key_name = "ibs-dev"
+  // key_name = "<YOUR KEY NAME>"
   depends_on = [aws_internet_gateway.tf-internet-gateway]
 
   user_data = file("script.sh")
